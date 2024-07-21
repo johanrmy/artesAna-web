@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/estilos.css">
+	<title>Decoraciones Cerámicas</title>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="navegar">
+				<div class="logo">
+					<img src="img/logo-byana-removebg-preview.png" alt="" height="80" width="80">
+				</div>
+				<div class="navegacion">
+					<nav class="menu">
+						<a href="#inicio">Inicio</a>
+						<a href="#quiensoy">Quién Soy</a>
+						<a href="#trabajos">Productos</a>
+						<a href="#contacto">Contacto</a>
+					</nav>
+				</div>
+			</div>
+
+			<div class="contenido-texto header-background section-padding" id="inicio">
+				<div class="header-content">
+					<p class="nombre">Ana García</p>
+					<p class="profesion">Artesana de cerámicas</p>
+					<p class="texto-yo">Descubre la belleza y el encanto de las cerámicas hechas a mano. Cada pieza es única y está diseñada para embellecer tu hogar.</p>
+					<div class="botones">
+						<button class="boton" type="button" name="contacto">Contacto</button>
+						<button class="boton" type="button" name="red">Redes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<section class="quiensoy section-padding" id="quiensoy">
+			<div class="container">
+				<h3 class="title-quiensoy">QUIÉN SOY</h3>
+				<div class="informacion">
+					<div class="foto">
+						<img src="img/by_ana.jpg" alt="yo">
+					</div>
+					<div class="texto-yo">
+						<p>Hola, soy Ana García, una apasionada artesana especializada en la creación de cerámicas decorativas. Cada pieza que creo está hecha con amor y dedicación, inspirada en la belleza de la naturaleza y la simplicidad del diseño contemporáneo.</p> <br>
+						<p>Desde jarrones hasta tazas y platos, cada artículo en mi colección está diseñado para traer un toque único y personal a tu hogar. Gracias por visitar mi página, espero que encuentres algo que te encante.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<hr class="line">
+			</div>
+		</section>
+		<section class="trabajos section-padding" id="trabajos">
+			<div class="container">
+				<h3 class="title-trabajos">PRODUCTOS</h3>
+				<div class="contenedor-trabajos">
+					<div class="trabajo">
+						<div class="thumb">
+							<img src="img/jarron-floral.jpeg" alt="t1" height="300px">
+						</div>
+						<div class="descripcion">
+							<p class="product-title">Jarrón Floral</p>
+							<p class="descripcion-texto">Jarrón decorativo hecho a mano con diseño floral. Perfecto para añadir un toque de elegancia a cualquier espacio.</p>
+							<a class="boton-trabajo web" href="#">Ver Producto</a>
+						</div>
+					</div>
+					<div class="trabajo">
+						<div class="thumb">
+							<img src="img/taza_ceramica.jpg" alt="t2" height="300px">
+						</div>
+						<div class="descripcion">
+							<p class="descripcion-texto">Taza de cerámica con un diseño único. Ideal para disfrutar de tu bebida favorita con estilo.</p>
+							<a class="boton-trabajo web" href="#">Ver Producto</a>
+						</div>
+					</div>
+					<div class="trabajo">
+						<div class="thumb">
+							<img src="img/plato_decorativo.jpg" alt="t3" height="300px">
+						</div>
+						<div class="descripcion">
+							<p class="descripcion-texto">Plato decorativo inspirado en patrones naturales. Perfecto como pieza central o para decorar una pared.</p>
+							<a class="boton-trabajo web" href="#" height="300px">Ver Producto</a>
+						</div>
+					</div>
+					<div class="trabajo">
+						<div class="thumb">
+							<img src="img/jarron_cermica.jpg" alt="t4" height="300px">
+						</div>
+						<div class="descripcion">
+							<p class="descripcion-texto">Jarrón de cerámica con diseño abstracto. Añade un toque moderno y artístico a tu hogar.</p>
+							<a class="boton-trabajo web" href="#">Ver Producto</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div class="container">
+			<section class="contacto section-padding" id="contacto">
+				<h3>CONTACTO</h3>
+				<form class="formulario" action="index.html" method="post">
+					<input type="text" name="nombre" placeholder="Nombres:">
+					<input type="email" name="correo" placeholder="Correo:">
+					<textarea name="texto" placeholder="Mensaje:"></textarea>
+					<input type="submit" name="enviar" value="Enviar">
+				</form>
+			</section>
+		</div>
+		<section class="redes-sociales section-padding">
+			<div class="redes">
+				<a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+				<a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+				<a class="github" href="#"><i class="fa fa-github"></i></a>
+				<a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+			</div>
+		</section>
+	</footer>
+	<script>
+		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+			anchor.addEventListener('click', function(e) {
+				e.preventDefault();
+				const targetId = this.getAttribute('href');
+				const targetElement = document.querySelector(targetId);
+				const offsetPosition = targetElement.offsetTop - document.querySelector('.navegar').offsetHeight;
+
+				window.scrollTo({
+					top: offsetPosition,
+					behavior: 'smooth'
+				});
+			});
+		});
+	</script>
+</body>
+</html>
